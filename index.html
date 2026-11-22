@@ -24,7 +24,20 @@ section{padding:66px 0}.head{text-align:center;max-width:690px;margin:0 auto 32p
 .email{font-weight:800;color:var(--blue);font-size:1.1rem}footer{padding:24px 0;background:white;border-top:1px solid var(--line);color:#7b899b;font-size:.85rem}
 @media(max-width:760px){.hero-grid,.cols{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.hero{padding:52px 0}}
 @media(max-width:520px){.cards{grid-template-columns:1fr}.btn{margin-top:8px}}
-</style></head><body>
+</style>
+<style id="cf-cookie-consent-style">
+#cf-cookie-banner{position:fixed;z-index:99999;left:18px;right:18px;bottom:18px;max-width:760px;margin:0 auto;background:#fff;color:#243247;border:1px solid #dce7f2;border-radius:16px;box-shadow:0 12px 42px #14243b30;padding:20px;font:14px/1.5 "Segoe UI",Arial,sans-serif;display:none}
+#cf-cookie-banner p{margin:7px 0 14px;color:#53647a}
+#cf-cookie-banner strong{color:#14243b;font-size:16px}
+.cf-cookie-actions{display:flex;flex-wrap:wrap;gap:9px}
+.cf-cookie-actions button,#cf-cookie-settings{border:0;border-radius:9px;padding:10px 15px;font:700 14px "Segoe UI",Arial,sans-serif;cursor:pointer}
+#cf-cookie-accept{background:#2878d0;color:#fff}
+#cf-cookie-reject{background:#edf2f7;color:#243247}
+#cf-cookie-banner a{color:#2878d0;text-decoration:underline}
+#cf-cookie-settings{position:fixed;z-index:99998;right:16px;bottom:16px;background:#14243b;color:#fff;box-shadow:0 4px 16px #14243b30;display:none}
+@media(max-width:520px){#cf-cookie-banner{left:10px;right:10px;bottom:10px;padding:16px}.cf-cookie-actions button{flex:1}}
+</style>
+</head><body>
 <header><div class="wrap"><nav><a class="brand" href="#"><span class="logo">CF</span>CLÍNICA FISIO</a><a class="btn" href="mailto:clinicafisio.info@gmail.com?subject=Informaci%C3%B3n%20sobre%20Cl%C3%ADnica%20Fisio">Contactar</a></nav></div></header>
 <main>
 <section class="hero"><div class="wrap hero-grid"><div><div class="kicker">Software de gestión para fisioterapia</div>
@@ -48,4 +61,93 @@ section{padding:66px 0}.head{text-align:center;max-width:690px;margin:0 auto 32p
 <div class="note"><b>Nota sobre Veri*Factu</b><br>El producto incorpora funcionalidades relacionadas con Veri*Factu. El envío real a la AEAT no está validado y permanece pendiente de las comprobaciones y puesta en producción correspondientes. No se presenta como una integración certificada o plenamente operativa.</div></div></section>
 <section class="contact" id="contacto"><div class="wrap"><div class="contactbox"><div class="kicker">Contacto profesional</div><h2>¿Quieres conocer Clínica Fisio?</h2><p>Para solicitar información, valorar una demostración o estudiar una posible adquisición, integración o colaboración, escríbenos.</p><p><a class="email" href="mailto:clinicafisio.info@gmail.com">clinicafisio.info@gmail.com</a></p><a class="btn" href="mailto:clinicafisio.info@gmail.com?subject=Inter%C3%A9s%20en%20Cl%C3%ADnica%20Fisio">Enviar consulta</a></div></div></section>
 </main><footer><div class="wrap">© Clínica Fisio · Software de gestión para clínicas de fisioterapia. Página informativa del producto.</div></footer>
+
+<div id="cf-cookie-banner" role="dialog" aria-live="polite" aria-label="Preferencias de cookies">
+  <strong>Tu privacidad importa</strong>
+  <p>Utilizamos Google Analytics para conocer, de forma estadística, cómo se utiliza esta página y mejorar Clínica Fisio. La analítica solo se activará si aceptas. Puedes rechazarla o cambiar tu decisión cuando quieras. Más información en la <a href="https://policies.google.com/privacy?hl=es" target="_blank" rel="noopener noreferrer">política de privacidad de Google</a>.</p>
+  <div class="cf-cookie-actions">
+    <button id="cf-cookie-accept" type="button">Aceptar analítica</button>
+    <button id="cf-cookie-reject" type="button">Rechazar</button>
+  </div>
+</div>
+<button id="cf-cookie-settings" type="button" aria-label="Cambiar preferencias de cookies">Configurar cookies</button>
+
+<script id="cf-cookie-consent-script">
+(function(){
+  var STORAGE_KEY = 'cf_analytics_consent';
+  var banner = document.getElementById('cf-cookie-banner');
+  var settings = document.getElementById('cf-cookie-settings');
+  if (!banner || !settings) return;
+
+  function loadAnalytics(){
+    if (window.__cfAnalyticsLoaded) return;
+    window.__cfAnalyticsLoaded = true;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ window.dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
+    });
+    gtag('consent', 'update', {'analytics_storage': 'granted'});
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-PSZHVGSL9P';
+    script.onload = function(){
+      gtag('js', new Date());
+      gtag('config', 'G-PSZHVGSL9P', {'send_page_view': false});
+      gtag('event', 'page_view', {
+        'page_title': document.title,
+        'page_location': window.location.href,
+        'page_path': window.location.pathname
+      });
+    };
+    document.head.appendChild(script);
+  }
+
+  function revokeAnalytics(){
+    if (window.__cfAnalyticsLoaded && typeof window.gtag === 'function') {
+      window.gtag('consent', 'update', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+  }
+
+  function hideBanner(){
+    banner.style.display = 'none';
+    settings.style.display = 'block';
+  }
+  function showBanner(){
+    banner.style.display = 'block';
+    settings.style.display = 'none';
+  }
+  function saveChoice(choice){
+    try { localStorage.setItem(STORAGE_KEY, choice); } catch(e) {}
+    if (choice === 'accepted') loadAnalytics();
+    else revokeAnalytics();
+    hideBanner();
+  }
+
+  var choice = null;
+  try { choice = localStorage.getItem(STORAGE_KEY); } catch(e) {}
+  if (choice === 'accepted') {
+    loadAnalytics();
+    hideBanner();
+  } else if (choice === 'rejected') {
+    hideBanner();
+  } else {
+    showBanner();
+  }
+
+  document.getElementById('cf-cookie-accept').addEventListener('click', function(){ saveChoice('accepted'); });
+  document.getElementById('cf-cookie-reject').addEventListener('click', function(){ saveChoice('rejected'); });
+  settings.addEventListener('click', showBanner);
+})();
+</script>
 </body></html>
