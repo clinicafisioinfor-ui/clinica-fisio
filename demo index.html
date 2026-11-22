@@ -4,7 +4,7 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Segoe UI,Arial,sans-serif;color:#11365c;background:#fff}
 a{text-decoration:none;color:inherit}.wrap{width:min(1180px,92%);margin:auto}
 .navbar{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #e3eef7;box-shadow:0 3px 18px #0b3d6410}.nav{height:78px;display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;gap:10px;align-items:center}.brand img{width:48px;height:48px;object-fit:cover;border-radius:9px}.brand strong{display:block;color:#0754a1;font-size:20px}.brand span{font-size:11px;color:#698096}
+.brand{display:flex;gap:10px;align-items:center}.brand img{width:48px;height:48px;object-fit:cover;border-radius:9px}.brand astrong{display:block;color:#0754a1;font-size:20px}.brand span{font-size:11px;color:#698096}
 .links{display:flex;gap:20px;font-size:13px;font-weight:800;color:#244766}.links a:hover{color:#0877d1}.navbtn{background:#0877d1;color:#fff;padding:11px 17px;border-radius:8px;font-weight:800}
 .hero{background:linear-gradient(115deg,#fbfeff,#edf8ff);overflow:hidden}.hero-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:48px;align-items:center;padding:68px 0}.kicker,.eyebrow{font-size:12px;letter-spacing:1.4px;font-weight:900;color:#0877d1}.hero h1{font-size:55px;line-height:1.02;letter-spacing:-2.5px;color:#072e5d;margin:14px 0 18px}.hero h1 span{display:block;color:#138fe8}.hero p{font-size:18px;line-height:1.6;color:#405e77;max-width:590px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{display:inline-flex;justify-content:center;align-items:center;padding:13px 19px;border-radius:8px;font-weight:850}.primary{background:linear-gradient(135deg,#0877d1,#1594ed);color:#fff;box-shadow:0 10px 25px #0877d138}.secondary{border:1px solid #0877d1;color:#0871c8;background:#fff}
 .monitor{background:#142333;padding:10px;border-radius:14px;box-shadow:0 25px 55px #073a6038}.monitorbar{height:22px;padding-left:7px;display:flex;gap:5px;align-items:center}.monitorbar i{width:7px;height:7px;border-radius:50%;background:#71879a}.monitor img{display:block;width:100%;border-radius:3px}.stand{width:120px;height:36px;background:#1a2d40;margin:auto}.base{width:220px;height:11px;background:#17293a;border-radius:50%;margin:-2px auto}
@@ -26,7 +26,20 @@ footer{background:#062b53;color:#c7dced;padding:27px 0}.foot{display:flex;align-
 @media(max-width:850px){.cf-demo-layout{grid-template-columns:1fr}.cf-demo-nav{display:flex;overflow-x:auto;gap:5px;padding:10px;white-space:nowrap}.cf-nav-caption{display:none}.cf-nav{width:auto;flex:none;padding:9px 11px}.cf-nav span{display:none}.cf-demo-main{padding:18px 14px}.cf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cf-demo-toolbar{align-items:start;flex-direction:column}.cf-date{align-self:flex-start}.cf-clinical,.cf-two,.cf-evolution{grid-template-columns:1fr}.cf-anatomy{min-height:230px}.cf-anatomy img{height:220px}.cf-demo-layout{min-height:0}.cf-module-content{min-height:0}.cf-agenda{grid-template-columns:38px repeat(5,minmax(75px,1fr));overflow-x:auto}.cf-panel{overflow-x:auto}.cf-demo-foot{font-size:9px;gap:10px}.cf-top-right{gap:6px}.cf-user{display:none}}
 @media(max-width:520px){.cf-demo-top{height:auto;padding:12px}.cf-demo-pill{font-size:8px;padding:7px}.cf-demo-main{padding:15px 10px}.cf-grid{gap:8px}.cf-card{padding:11px}.cf-kpi strong{font-size:21px}.cf-panel{padding:12px}.cf-demo-toolbar h3{font-size:20px}.cf-zone-list{grid-template-columns:1fr 1fr}.cf-demo-foot{flex-direction:column}}
 
-</style></head><body>
+</style>
+<style id="cf-cookie-consent-style">
+#cf-cookie-banner{position:fixed;z-index:99999;left:18px;right:18px;bottom:18px;max-width:760px;margin:0 auto;background:#fff;color:#243247;border:1px solid #dce7f2;border-radius:16px;box-shadow:0 12px 42px #14243b30;padding:20px;font:14px/1.5 "Segoe UI",Arial,sans-serif;display:none}
+#cf-cookie-banner p{margin:7px 0 14px;color:#53647a}
+#cf-cookie-banner strong{color:#14243b;font-size:16px}
+.cf-cookie-actions{display:flex;flex-wrap:wrap;gap:9px}
+.cf-cookie-actions button,#cf-cookie-settings{border:0;border-radius:9px;padding:10px 15px;font:700 14px "Segoe UI",Arial,sans-serif;cursor:pointer}
+#cf-cookie-accept{background:#2878d0;color:#fff}
+#cf-cookie-reject{background:#edf2f7;color:#243247}
+#cf-cookie-banner a{color:#2878d0;text-decoration:underline}
+#cf-cookie-settings{position:fixed;z-index:99998;right:16px;bottom:16px;background:#14243b;color:#fff;box-shadow:0 4px 16px #14243b30;display:none}
+@media(max-width:520px){#cf-cookie-banner{left:10px;right:10px;bottom:10px;padding:16px}.cf-cookie-actions button{flex:1}}
+</style>
+</head><body>
 <header class="navbar"><div class="wrap nav"><a class="brand" href="#inicio"><img src="data:image/jpeg;base64,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" alt=""><div><strong>CLÍNICA FISIO</strong><span>Fisioterapia y deporte</span></div></a>
 <nav class="links"><a href="#inicio">Inicio</a><a href="#funcionalidades">Funcionalidades</a><a href="#capturas">Capturas</a><a href="#demo">Demo</a><a href="#ventajas">Ventajas</a><a href="#empresas">Para empresas</a></nav>
 <a class="navbtn" href="#contacto">✉ Solicitar información</a></div></header>
@@ -89,4 +102,93 @@ function showModule(name){const m=modules[name]||modules.inicio;$('cf-module-tit
 function toast(id){const el=$(id);if(el)el.style.display='block'}
 function wireModule(name){document.querySelectorAll('[data-jump]').forEach(b=>b.addEventListener('click',()=>showModule(b.dataset.jump)));if(name==='agenda'){$('cf-add-appointment')?.addEventListener('click',()=>{const n=prompt('Nombre ficticio del paciente:','Nuevo paciente');if(n)alert('Cita de demostración creada para '+n+'. No se ha guardado ningún dato real.')})}if(name==='pacientes'){$('cf-add-patient')?.addEventListener('click',()=>toast('cf-patient-toast'));$('cf-search-patient')?.addEventListener('input',e=>{document.querySelectorAll('#cf-patient-table tbody tr').forEach(r=>r.style.display=r.innerText.toLowerCase().includes(e.target.value.toLowerCase())?'':'none')})}if(name==='facturacion')$('cf-new-invoice')?.addEventListener('click',()=>toast('cf-invoice-toast'));if(name==='verifactu'){$('cf-simulate-send')?.addEventListener('click',()=>toast('cf-veri-toast'));$('cf-show-chain')?.addEventListener('click',()=>{$('cf-chain-detail').style.display='block'})}if(name==='whatsapp')$('cf-whatsapp-send')?.addEventListener('click',()=>toast('cf-wa-toast'));if(name==='radio'){$('cf-radio-play')?.addEventListener('click',()=>toast('cf-radio-toast'));$('cf-radio-stop')?.addEventListener('click',()=>toast('cf-radio-toast'))}}
 document.querySelectorAll('.cf-nav').forEach(b=>b.addEventListener('click',()=>showModule(b.dataset.module)));showModule('inicio');
-</script></body></html></body></html>
+</script>
+<div id="cf-cookie-banner" role="dialog" aria-live="polite" aria-label="Preferencias de cookies">
+  <strong>Tu privacidad importa</strong>
+  <p>Utilizamos Google Analytics para conocer, de forma estadística, cómo se utiliza esta página y mejorar Clínica Fisio. La analítica solo se activará si aceptas. Puedes rechazarla o cambiar tu decisión cuando quieras. Más información en la <a href="https://policies.google.com/privacy?hl=es" target="_blank" rel="noopener noreferrer">política de privacidad de Google</a>.</p>
+  <div class="cf-cookie-actions">
+    <button id="cf-cookie-accept" type="button">Aceptar analítica</button>
+    <button id="cf-cookie-reject" type="button">Rechazar</button>
+  </div>
+</div>
+<button id="cf-cookie-settings" type="button" aria-label="Cambiar preferencias de cookies">Configurar cookies</button>
+
+<script id="cf-cookie-consent-script">
+(function(){
+  var STORAGE_KEY = 'cf_analytics_consent';
+  var banner = document.getElementById('cf-cookie-banner');
+  var settings = document.getElementById('cf-cookie-settings');
+  if (!banner || !settings) return;
+
+  function loadAnalytics(){
+    if (window.__cfAnalyticsLoaded) return;
+    window.__cfAnalyticsLoaded = true;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ window.dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
+    });
+    gtag('consent', 'update', {'analytics_storage': 'granted'});
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-PSZHVGSL9P';
+    script.onload = function(){
+      gtag('js', new Date());
+      gtag('config', 'G-PSZHVGSL9P', {'send_page_view': false});
+      gtag('event', 'page_view', {
+        'page_title': document.title,
+        'page_location': window.location.href,
+        'page_path': window.location.pathname
+      });
+    };
+    document.head.appendChild(script);
+  }
+
+  function revokeAnalytics(){
+    if (window.__cfAnalyticsLoaded && typeof window.gtag === 'function') {
+      window.gtag('consent', 'update', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+  }
+
+  function hideBanner(){
+    banner.style.display = 'none';
+    settings.style.display = 'block';
+  }
+  function showBanner(){
+    banner.style.display = 'block';
+    settings.style.display = 'none';
+  }
+  function saveChoice(choice){
+    try { localStorage.setItem(STORAGE_KEY, choice); } catch(e) {}
+    if (choice === 'accepted') loadAnalytics();
+    else revokeAnalytics();
+    hideBanner();
+  }
+
+  var choice = null;
+  try { choice = localStorage.getItem(STORAGE_KEY); } catch(e) {}
+  if (choice === 'accepted') {
+    loadAnalytics();
+    hideBanner();
+  } else if (choice === 'rejected') {
+    hideBanner();
+  } else {
+    showBanner();
+  }
+
+  document.getElementById('cf-cookie-accept').addEventListener('click', function(){ saveChoice('accepted'); });
+  document.getElementById('cf-cookie-reject').addEventListener('click', function(){ saveChoice('rejected'); });
+  settings.addEventListener('click', showBanner);
+})();
+</script>
+</body></html></body></html>
